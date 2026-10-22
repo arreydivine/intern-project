@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register | HustleHub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/forms.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">HustleHub</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="freelancers.html">Freelancers</a></li>
+          <li><a href="post-job.html">Post a Job</a></li>
+          <li><a href="login.html" class="active">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="form-card">
+      <h1>Create an account</h1>
+      <p class="demo-note">Demo only. No real account is created.</p>
+
+      <form id="register-form" novalidate>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" placeholder="Your full name">
+          <p class="error" id="name-error"></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@example.com">
+          <p class="error" id="email-error"></p>
+        </div>
+
+        <div class="field">
+          <label for="role">I want to</label>
+          <select id="role">
+            <option value="">Choose one</option>
+            <option value="freelancer">Find work (freelancer)</option>
+            <option value="client">Hire people (client)</option>
+          </select>
+          <p class="error" id="role-error"></p>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="At least 8 characters, with a letter and a number">
+          <p class="strength" id="strength"></p>
+          <p class="error" id="password-error"></p>
+        </div>
+
+        <div class="field">
+          <label for="confirm">Confirm password</label>
+          <input type="password" id="confirm" placeholder="Type the password again">
+          <button type="button" class="link-btn" id="toggle-password">Show passwords</button>
+          <p class="error" id="confirm-error"></p>
+        </div>
+
+        <div class="field">
+          <label class="check">
+            <input type="checkbox" id="terms">
+            <span>I understand this is a demo and I will never pay money to get a job.</span>
+          </label>
+          <p class="error" id="terms-error"></p>
+        </div>
+
+        <button type="submit" class="btn">Create account</button>
+        <p class="form-message" id="form-message"></p>
+      </form>
+
+      <p class="switch">Already have an account? <a href="login.html">Log in</a></p>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>Find opportunities. Show your skills. Get work done.</p>
+      <p>HustleHub is a demo prototype. Listings are sample data.</p>
+    </div>
+  </footer>
+
+  <script src="js/forms.js"></script>
+</body>
+</html>

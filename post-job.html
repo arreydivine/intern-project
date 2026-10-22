@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Post a Job | HustleHub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/forms.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">HustleHub</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="freelancers.html">Freelancers</a></li>
+          <li><a href="post-job.html" class="active">Post a Job</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="post-layout">
+
+      <div class="form-card">
+        <h1>Post a job</h1>
+        <p class="demo-note">Demo only. Your job will not be published. Real posting needs a backend.</p>
+
+        <form id="post-job-form" novalidate>
+          <div class="field">
+            <label for="job-title">Job title</label>
+            <input type="text" id="job-title" placeholder="e.g. Design a logo for my shop">
+            <p class="error" id="job-title-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="company">Company or your name</label>
+            <input type="text" id="company" placeholder="e.g. Sweet Crumbs Bakery">
+            <p class="error" id="company-error"></p>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="category">Category</label>
+              <select id="category">
+                <option value="">Choose one</option>
+                <option>Design</option>
+                <option>Web Development</option>
+                <option>Marketing</option>
+                <option>Writing</option>
+                <option>Admin</option>
+              </select>
+              <p class="error" id="category-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="job-type">Job type</label>
+              <select id="job-type">
+                <option value="">Choose one</option>
+                <option>Freelance</option>
+                <option>Part-time</option>
+                <option>Short gig</option>
+                <option>Internship</option>
+              </select>
+              <p class="error" id="job-type-error"></p>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="work-mode">Work mode</label>
+              <select id="work-mode">
+                <option value="">Choose one</option>
+                <option>Remote</option>
+                <option>On-site</option>
+              </select>
+              <p class="error" id="work-mode-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="country">Country</label>
+              <input type="text" id="country" placeholder="e.g. Cameroon">
+              <p class="error" id="country-error"></p>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="pay-min">Pay from ($)</label>
+              <input type="number" id="pay-min" min="1" placeholder="50">
+              <p class="error" id="pay-min-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="pay-max">Pay up to ($)</label>
+              <input type="number" id="pay-max" min="1" placeholder="80">
+              <p class="error" id="pay-max-error"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="deadline">Deadline</label>
+            <input type="date" id="deadline">
+            <p class="error" id="deadline-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="skills">Required skills</label>
+            <input type="text" id="skills" placeholder="Separate with commas: HTML, CSS, Git">
+            <p class="error" id="skills-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="description">Task and deliverables</label>
+            <textarea id="description" rows="5" placeholder="What must be done, and what will you receive at the end?"></textarea>
+            <p class="hint"><span id="desc-count">0</span> / 30 characters minimum</p>
+            <p class="error" id="description-error"></p>
+          </div>
+
+          <button type="submit" class="btn">Post job</button>
+          <p class="form-message" id="form-message"></p>
+        </form>
+      </div>
+
+      <aside class="preview-card">
+        <p class="hint">Live preview</p>
+        <h2 id="preview-title">Job title</h2>
+        <p class="company" id="preview-company">Company</p>
+        <p class="preview-meta" id="preview-meta">Type · Mode · Country</p>
+        <ul class="preview-skills" id="preview-skills"></ul>
+        <p class="preview-pay" id="preview-pay">Pay not set</p>
+        <p class="hint" id="preview-deadline">No deadline</p>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>Find opportunities. Show your skills. Get work done.</p>
+      <p>HustleHub is a demo prototype. Listings are sample data.</p>
+    </div>
+  </footer>
+
+  <script src="js/forms.js"></script>
+</body>
+</html>

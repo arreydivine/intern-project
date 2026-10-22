@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login | HustleHub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/forms.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">HustleHub</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="freelancers.html">Freelancers</a></li>
+          <li><a href="post-job.html">Post a Job</a></li>
+          <li><a href="login.html" class="active">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="form-card">
+      <h1>Log in</h1>
+      <p class="demo-note">Demo only. No real account is created or checked.</p>
+
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@example.com">
+          <p class="error" id="email-error"></p>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="At least 8 characters">
+          <button type="button" class="link-btn" id="toggle-password">Show password</button>
+          <p class="error" id="password-error"></p>
+        </div>
+
+        <button type="submit" class="btn">Log in</button>
+        <p class="form-message" id="form-message"></p>
+      </form>
+
+      <p class="switch">New here? <a href="register.html">Create an account</a></p>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>Find opportunities. Show your skills. Get work done.</p>
+      <p>HustleHub is a demo prototype. Listings are sample data.</p>
+    </div>
+  </footer>
+
+  <script src="js/forms.js"></script>
+</body>
+</html>
