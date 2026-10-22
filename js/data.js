@@ -85,11 +85,10 @@ const jobs = [
     deliverables: "30 translated product descriptions"
   },
   {
-    {
     id: 7,
     title: "Frontend Developer",
     company: "BrightTech Solutions",
-    category: "Technology",
+    category: "Web Development",
     type: "Internship",
     level: "Beginner",
     country: "Cameroon",
@@ -98,8 +97,8 @@ const jobs = [
     deadline: "2026-11-15",
     skills: ["HTML", "CSS", "JavaScript"],
     deliverables: "Build responsive and user-friendly web pages."
-},
-{
+  },
+  {
     id: 8,
     title: "Graphic Designer",
     company: "Creative Studio",
@@ -112,8 +111,8 @@ const jobs = [
     deadline: "2026-11-20",
     skills: ["Canva", "Photoshop", "Creativity"],
     deliverables: "Create graphics for digital platforms."
-},
-{
+  },
+  {
     id: 9,
     title: "Content Writer",
     company: "WordCraft Media",
@@ -126,12 +125,12 @@ const jobs = [
     deadline: "2026-11-22",
     skills: ["Writing", "Research", "Editing"],
     deliverables: "Write clear articles and website content."
-},
-{
+  },
+  {
     id: 10,
     title: "Data Entry Assistant",
     company: "DataPoint Services",
-    category: "Administration",
+    category: "Admin",
     type: "Part-time",
     level: "Beginner",
     country: "Cameroon",
@@ -140,8 +139,8 @@ const jobs = [
     deadline: "2026-11-25",
     skills: ["Typing", "Excel", "Accuracy"],
     deliverables: "Enter and organize digital records."
-},
-{
+  },
+  {
     id: 11,
     title: "Social Media Manager",
     company: "SocialWave Agency",
@@ -154,12 +153,12 @@ const jobs = [
     deadline: "2026-11-28",
     skills: ["Social Media", "Content Planning", "Communication"],
     deliverables: "Plan posts and manage social media accounts."
-},
-{
+  },
+  {
     id: 12,
     title: "Virtual Assistant",
     company: "AssistPro",
-    category: "Administration",
+    category: "Admin",
     type: "Part-time",
     level: "Beginner",
     country: "Cameroon",
@@ -168,6 +167,5 @@ const jobs = [
     deadline: "2026-11-30",
     skills: ["Communication", "Organization", "Email Management"],
     deliverables: "Help manage emails, schedules, and daily tasks."
-}
   }
 ];
