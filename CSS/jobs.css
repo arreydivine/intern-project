@@ -1,0 +1,80 @@
+/* Styles only for the Jobs page */
+.page-header {
+  padding: 2rem 0 1rem;
+}
+
+.page-header p {
+  max-width: 55ch;
+}
+
+#job-count {
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
+#job-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.job-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.job-card h3 {
+  margin-bottom: 0.25rem;
+}
+
+.company {
+  color: #4b5f59;
+  font-size: 0.95rem;
+}
+
+.tags {
+  margin: 0.75rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tags span {
+  background: #e3efec;
+  color: var(--green-dark);
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.skills {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.skills li {
+  border: 1px solid var(--border);
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+}
+
+.pay {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.deadline {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 700px) {
+  #job-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

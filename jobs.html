@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jobs | HustleHub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/jobs.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">HustleHub</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html" class="active">Jobs</a></li>
+          <li><a href="freelancers.html">Freelancers</a></li>
+          <li><a href="post-job.html">Post a Job</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-header">
+      <h1>Find a job</h1>
+      <p>Sample listings for the demo. Every job shows the pay, the task and the deadline.</p>
+    </section>
+
+    <p id="job-count"></p>
+    <section id="job-list"></section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>Find opportunities. Show your skills. Get work done.</p>
+      <p>HustleHub is a demo prototype. Listings are sample data.</p>
+    </div>
+  </footer>
+
+  <!-- data.js must come BEFORE jobs.js -->
+  <script src="js/data.js"></script>
+  <script src="js/jobs.js"></script>
+</body>
+</html>

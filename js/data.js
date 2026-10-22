@@ -1,0 +1,87 @@
+// SAMPLE DATA (demo only). Later, a backend will replace this.
+const jobs = [
+  {
+    id: 1,
+    title: "Logo Design for a Bakery",
+    company: "Sweet Crumbs Bakery",
+    category: "Design",
+    type: "Freelance",
+    level: "Beginner",
+    country: "Cameroon",
+    remote: true,
+    pay: "$50 - $80",
+    deadline: "2026-11-15",
+    skills: ["Logo design", "Canva", "Illustrator"],
+    deliverables: "3 logo concepts and the final files (PNG and SVG)"
+  },
+  {
+    id: 2,
+    title: "Build a 5-Page Business Website",
+    company: "Kemba Consulting",
+    category: "Web Development",
+    type: "Freelance",
+    level: "Intermediate",
+    country: "Nigeria",
+    remote: true,
+    pay: "$300 - $450",
+    deadline: "2026-12-01",
+    skills: ["HTML", "CSS", "JavaScript"],
+    deliverables: "A responsive 5-page website, ready to publish"
+  },
+  {
+    id: 3,
+    title: "Social Media Content Assistant",
+    company: "GreenLeaf Startup",
+    category: "Marketing",
+    type: "Part-time",
+    level: "Beginner",
+    country: "Ghana",
+    remote: true,
+    pay: "$120 / month",
+    deadline: "2026-11-20",
+    skills: ["Writing", "Canva", "Social media"],
+    deliverables: "12 posts per month with captions"
+  },
+  {
+    id: 4,
+    title: "Data Entry for a Product Catalogue",
+    company: "Douala Market Hub",
+    category: "Admin",
+    type: "Short gig",
+    level: "Beginner",
+    country: "Cameroon",
+    remote: false,
+    pay: "$40 fixed",
+    deadline: "2026-11-05",
+    skills: ["Excel", "Typing", "Attention to detail"],
+    deliverables: "200 products entered into a spreadsheet"
+  },
+  {
+    id: 5,
+    title: "Web Development Intern",
+    company: "BrightPath Tech",
+    category: "Web Development",
+    type: "Internship",
+    level: "Beginner",
+    country: "Kenya",
+    remote: true,
+    pay: "$100 / month",
+    deadline: "2026-12-10",
+    skills: ["HTML", "CSS", "Git"],
+    deliverables: "Fix small website bugs and build simple pages"
+  },
+  {
+    id: 6,
+    title: "Translate Product Descriptions (EN to FR)",
+    company: "Afrique Goods",
+    category: "Writing",
+    type: "Short gig",
+    level: "Intermediate",
+    country: "Senegal",
+    remote: true,
+    pay: "$60 - $90",
+    deadline: "2026-11-25",
+    skills: ["English", "French", "Proofreading"],
+    deliverables: "30 translated product descriptions"
+  }
+];
