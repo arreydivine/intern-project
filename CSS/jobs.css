@@ -1,80 +1,145 @@
 /* Styles only for the Jobs page */
+
+/* ===== Page header ===== */
 .page-header {
-  padding: 2rem 0 1rem;
+  margin-top: 1.5rem;
+  padding: 1.75rem 1.5rem;
+  background: var(--green);
+  color: var(--white);
+  border-radius: 10px;
+}
+
+.page-header h1 {
+  margin-bottom: 0.25rem;
 }
 
 .page-header p {
   max-width: 55ch;
+  color: #d8efec;
 }
 
+/* ===== Results count ===== */
 #job-count {
-  margin: 1rem 0;
-  font-weight: 600;
+  margin: 1.5rem 0 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #4b5f59;
 }
 
+/* ===== Job grid ===== */
 #job-list {
   display: grid;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
+/* ===== Job card ===== */
 .job-card {
+  display: flex;
+  flex-direction: column;
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-top: 4px solid var(--green);
+  border-radius: 10px;
   padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(16, 36, 30, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(16, 36, 30, 0.12);
 }
 
 .job-card h3 {
+  font-size: 1.15rem;
+  line-height: 1.3;
   margin-bottom: 0.25rem;
 }
 
 .company {
   color: #4b5f59;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
+/* Tags: job type, level, category */
 .tags {
-  margin: 0.75rem 0;
+  margin: 0.9rem 0 0.6rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 .tags span {
   background: #e3efec;
   color: var(--green-dark);
-  padding: 0.15rem 0.6rem;
+  padding: 0.15rem 0.65rem;
   border-radius: 999px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
+.tags span:first-child {
+  background: #fff1bf;
+  color: #5c4500;
+}
+
+/* Skills */
 .skills {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 0.75rem;
-  font-size: 0.9rem;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
 }
 
 .skills li {
+  background: var(--bg);
   border: 1px solid var(--border);
-  padding: 0.1rem 0.5rem;
+  padding: 0.1rem 0.55rem;
   border-radius: 4px;
 }
 
+/* Pay and deadline sit at the bottom of every card */
 .pay {
-  font-size: 1.15rem;
-  font-weight: 700;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--green-dark);
 }
 
 .deadline {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  color: #4b5f59;
   margin-bottom: 1rem;
+}
+
+.job-card .btn {
+  text-align: center;
 }
 
 @media (min-width: 700px) {
   #job-list {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  #job-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .job-card {
+    transition: none;
+  }
+
+  .job-card:hover {
+    transform: none;
   }
 }

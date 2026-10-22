@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HustleHub | Find opportunities. Show your skills.</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/jobs.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 
@@ -24,7 +26,6 @@
     </div>
   </header>
 
-  <!-- MAIN CONTENT (we will build this in the next steps) -->
   <main>
 
     <!-- HERO -->
@@ -39,7 +40,41 @@
       </div>
     </section>
 
-    <!-- HOW IT WORKS (a real sequence, so numbered steps make sense) -->
+    <!-- NUMBERS STRIP (filled by js/home.js) -->
+    <section class="stats">
+      <div class="container stats-grid">
+        <div><strong id="stat-jobs">0</strong><span>Sample jobs</span></div>
+        <div><strong id="stat-categories">0</strong><span>Categories</span></div>
+        <div><strong id="stat-remote">0</strong><span>Remote-friendly</span></div>
+      </div>
+    </section>
+
+    <!-- FEATURED JOBS (filled by js/home.js) -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured jobs</h2>
+          <a href="jobs.html" class="more-link">View all jobs</a>
+        </div>
+        <div id="job-list"></div>
+      </div>
+    </section>
+
+    <!-- BROWSE BY CATEGORY -->
+    <section class="section">
+      <div class="container">
+        <h2>Browse by category</h2>
+        <div class="cats">
+          <a href="jobs.html?category=Design">Design</a>
+          <a href="jobs.html?category=Web Development">Web Development</a>
+          <a href="jobs.html?category=Marketing">Marketing</a>
+          <a href="jobs.html?category=Writing">Writing</a>
+          <a href="jobs.html?category=Admin">Admin</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
     <section class="section">
       <div class="container">
         <h2>How it works</h2>
@@ -60,6 +95,27 @@
       </div>
     </section>
 
+    <!-- WHY HUSTLEHUB -->
+    <section class="section">
+      <div class="container">
+        <h2>Why HustleHub</h2>
+        <div class="why">
+          <div>
+            <h3>Clear pay and tasks</h3>
+            <p>Listings show the budget, deliverables, deadline and required skills.</p>
+          </div>
+          <div>
+            <h3>Beginner friendly</h3>
+            <p>Internships, small gigs and portfolio projects, not only senior roles.</p>
+          </div>
+          <div>
+            <h3>Built for phones</h3>
+            <p>Light pages that stay fast on mobile and slower connections.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- SAFETY TIPS -->
     <section class="section">
       <div class="container">
@@ -75,6 +131,17 @@
       </div>
     </section>
 
+    <!-- CALL TO ACTION -->
+    <section class="section">
+      <div class="container">
+        <div class="cta">
+          <h2>Ready to start?</h2>
+          <p>Create your free account and show your skills.</p>
+          <a href="register.html" class="btn">Create an account</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- FOOTER (copy this block into every page) -->
@@ -85,5 +152,8 @@
     </div>
   </footer>
 
+  <!-- data.js must come BEFORE home.js -->
+  <script src="js/data.js"></script>
+  <script src="js/home.js"></script>
 </body>
 </html>
