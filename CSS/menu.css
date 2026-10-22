@@ -1,0 +1,71 @@
+/* Mobile menu (loaded by js/menu.js) */
+
+/* The button is hidden on wide screens */
+.menu-toggle {
+  display: none;
+  background: var(--white);
+  border: 2px solid var(--green);
+  border-radius: 6px;
+  padding: 0.45rem 0.55rem;
+  color: var(--green);
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 4px 0;
+  background: currentColor;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* The three bars turn into an X when the menu is open */
+.menu-open .menu-toggle .bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menu-open .menu-toggle .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-open .menu-toggle .bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Phones: hide the links until the button is pressed */
+@media (max-width: 699px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar nav {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar.menu-open nav {
+    display: block;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .navbar .nav-links a {
+    display: block;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .navbar .nav-links a.active {
+    border-bottom-color: var(--gold);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-toggle .bar {
+    transition: none;
+  }
+}
