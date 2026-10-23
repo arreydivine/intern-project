@@ -35,6 +35,37 @@ function validateSelect(input, label) {
   return true;
 }
 
+// Small pop-up message that disappears by itself after 4 seconds
+let toastTimer;
+
+function showToast(message) {
+  let toast = document.getElementById("toast");
+  if (!toast) {
+    toast = document.createElement("div");
+    toast.id = "toast";
+    toast.className = "toast";
+    toast.setAttribute("role", "status");
+    toast.addEventListener("click", function () {
+      toast.classList.remove("show");
+    });
+    document.body.appendChild(toast);
+  }
+  toast.textContent = message;
+  toast.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function () {
+    toast.classList.remove("show");
+  }, 4000);
+}
+
+// Empty a form and remove the green and red borders
+function resetForm(form) {
+  form.reset();
+  form.querySelectorAll(".valid, .invalid").forEach(function (el) {
+    el.classList.remove("valid", "invalid");
+  });
+}
+
 function validateEmailField(input) {
   if (!isValidEmail(input.value.trim())) {
     showError(input, "Enter a valid email, like you@example.com");
@@ -78,7 +109,8 @@ if (loginForm) {
     }
 
     if (ok) {
-      formMessage.textContent = "Demo login successful. (No real account was checked.)";
+      showToast("Demo login successful. No real account was checked.");
+      resetForm(loginForm);
     }
   });
 }
@@ -161,7 +193,10 @@ if (registerForm) {
     }
 
     if (ok) {
-      formMessage.textContent = "Demo account created. (Nothing was saved.)";
+      showToast("Demo account created. Nothing was saved.");
+      resetForm(registerForm);
+      strengthText.textContent = "";
+      strengthText.className = "strength";
     }
   });
 }
@@ -284,7 +319,9 @@ if (postForm) {
     if (!validateText(descInput, "Description", 30)) { ok = false; }
 
     if (ok) {
-      formMessage.textContent = "Demo only: your job was NOT published. Real posting needs a backend.";
+      showToast("Demo only: your job was NOT published. Real posting needs a backend.");
+      resetForm(postForm);
+      updatePreview();
     }
   });
 }
