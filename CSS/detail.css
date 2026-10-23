@@ -1,0 +1,69 @@
+/* Styles only for the Job details page */
+.back-link {
+  display: inline-block;
+  margin: 1.5rem 0 1rem;
+  color: var(--green);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.detail-layout {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.detail-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--green);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.detail-card h1 {
+  margin-bottom: 0.25rem;
+}
+
+.detail-card h2 {
+  font-size: 1.05rem;
+  margin: 1.25rem 0 0.4rem;
+}
+
+.pay-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-self: start;
+}
+
+.pay-box .btn {
+  text-align: center;
+}
+
+.mini-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #4b5f59;
+}
+
+.warning {
+  margin-top: 1.5rem;
+  background: #fff6d6;
+  border-left: 4px solid var(--gold);
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+}
+
+.demo-msg {
+  font-size: 0.85rem;
+  color: var(--green-dark);
+  min-height: 1.2rem;
+}
+
+@media (min-width: 800px) {
+  .detail-layout {
+    grid-template-columns: 2fr 1fr;
+  }
+}
